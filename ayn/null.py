@@ -1,20 +1,21 @@
 # $Id: null.py 4564 2006-05-21 20:44:42Z wiemann $
-# Author: Martin Blais <blais@furius.ca>
+# Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
-"""A do-nothing parser."""
+"""
+A do-nothing Writer.
+"""
 
-from docutils import parsers
+from docutils import writers
 
 
-class Parser(parsers.Parser):
-
-    """A do-nothing parser."""
+class Writer(writers.UnfilteredWriter):
 
     supported = ('null',)
+    """Formats this writer supports."""
 
-    config_section = 'null parser'
-    config_section_dependencies = ('parsers',)
+    config_section = 'null writer'
+    config_section_dependencies = ('writers',)
 
-    def parse(self, inputstring, document):
+    def translate(self):
         pass
