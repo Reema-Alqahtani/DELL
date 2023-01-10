@@ -8,53 +8,102 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Lithuanian language mappings for language-dependent features of Docutils.
+Lithuanian-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      # fixed: language-dependent
-      'author': 'Autorius',
-      'authors': 'Autoriai',
-      'organization': 'Organizacija',
-      'address': 'Adresas',
-      'contact': 'Kontaktas',
-      'version': 'Versija',
-      'revision': 'Revizija',
-      'status': 'Būsena',
-      'date': 'Data',
-      'copyright': 'Autoriaus teisės',
-      'dedication': 'Dedikacija',
-      'abstract': 'Santrauka',
-      'attention': 'Dėmesio!',
-      'caution': 'Atsargiai!',
-      'danger': '!PAVOJINGA!',
-      'error': 'Klaida',
-      'hint': 'Užuomina',
-      'important': 'Svarbu',
-      'note': 'Pastaba',
-      'tip': 'Patarimas',
-      'warning': 'Įspėjimas',
-      'contents': 'Turinys'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
+directives = {
       # language-dependent: fixed
-      'autorius': 'author',
-      'autoriai': 'authors',
-      'organizacija': 'organization',
-      'adresas': 'address',
-      'kontaktas': 'contact',
-      'versija': 'version',
-      'revizija': 'revision',
-      'būsena': 'status',
+      'dėmesio': 'attention',
+      'atsargiai': 'caution',
+      'code (translation required)': 'code',
+      'pavojinga': 'danger',
+      'klaida': 'error',
+      'užuomina': 'hint',
+      'svarbu': 'important',
+      'pastaba': 'note',
+      'patarimas': 'tip',
+      'įspėjimas': 'warning',
+      'perspėjimas': 'admonition',
+      'šoninė-juosta': 'sidebar',
+      'tema': 'topic',
+      'linijinis-blokas': 'line-block',
+      'išanalizuotas-literalas': 'parsed-literal',
+      'rubrika': 'rubric',
+      'epigrafas': 'epigraph',
+      'pagridiniai-momentai': 'highlights',
+      'atitraukta-citata': 'pull-quote',
+      'sudėtinis-darinys': 'compound',
+      'konteineris': 'container',
+      # 'questions': 'questions',
+      'lentelė': 'table',
+      'csv-lentelė': 'csv-table',
+      'sąrašo-lentelė': 'list-table',
+      # 'qa': 'questions',
+      # 'faq': 'questions',
+      'meta': 'meta',
+      'matematika': 'math',
+      # 'imagemap': 'imagemap',
+      'paveiksliukas': 'image',
+      'iliustracija': 'figure',
+      'pridėti': 'include',
+      'žalia': 'raw',
+      'pakeisti': 'replace',
+      'unikodas': 'unicode',
       'data': 'date',
-      'autoriaus teisės': 'copyright',
-      'dedikacija': 'dedication',
-      'santrauka': 'abstract'}
-"""Lithuanian (lowcased) to canonical name mapping for bibliographic fields."""
+      'klasė': 'class',
+      'rolė': 'role',
+      'numatytoji-rolė': 'default-role',
+      'titulas': 'title',
+      'turinys': 'contents',
+      'seknum': 'sectnum',
+      'sekcijos-numeravimas': 'sectnum',
+      'antraštė': 'header',
+      'poraštė': 'footer',
+      # 'footnotes': 'footnotes',
+      # 'citations': 'citations',
+      'nutaikytos-pastaba': 'target-notes',
+      'restructuredtext-testinė-direktyva': 'restructuredtext-test-directive'}
+"""Lithuanian name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    # language-dependent: fixed
+    'santrumpa': 'abbreviation',
+    'sa': 'abbreviation',
+    'akronimas': 'acronym',
+    'ak': 'acronym',
+    'code (translation required)': 'code',
+    'indeksas': 'index',
+    'i': 'index',
+    'apatinis-indeksas': 'subscript',
+    'sub': 'subscript',
+    'viršutinis-indeksas': 'superscript',
+    'sup': 'superscript',
+    'antrašės-nuoroda': 'title-reference',
+    'antraštė': 'title-reference',
+    'a': 'title-reference',
+    'pep-nuoroda': 'pep-reference',
+    'pep': 'pep-reference',
+    'rfc-nuoroda': 'rfc-reference',
+    'rfc': 'rfc-reference',
+    'paryškinimas': 'emphasis',
+    'sustiprintas': 'strong',
+    'literalas': 'literal',
+    'matematika': 'math',
+    'vardinė-nuoroda': 'named-reference',
+    'anoniminė-nuoroda': 'anonymous-reference',
+    'išnašos-nuoroda': 'footnote-reference',
+    'citatos-nuoroda': 'citation-reference',
+    'pakeitimo-nuoroda': 'substitution-reference',
+    'taikinys': 'target',
+    'uri-nuoroda': 'uri-reference',
+    'uri': 'uri-reference',
+    'url': 'uri-reference',
+    'žalia': 'raw',
+    }
+"""Mapping of English role names to canonical role names for interpreted text.
+"""

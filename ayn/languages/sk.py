@@ -8,51 +8,89 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Slovak-language mappings for language-dependent features of Docutils.
+Slovak-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      'author': 'Autor',
-      'authors': 'Autori',
-      'organization': 'Organiz\u00E1cia',
-      'address': 'Adresa',
-      'contact': 'Kontakt',
-      'version': 'Verzia',
-      'revision': 'Rev\u00EDzia',
-      'status': 'Stav',
-      'date': 'D\u00E1tum',
-      'copyright': 'Copyright',
-      'dedication': 'Venovanie',
-      'abstract': 'Abstraktne',
-      'attention': 'Pozor!',
-      'caution': 'Opatrne!',
-      'danger': '!NEBEZPE\u010cENSTVO!',
-      'error': 'Chyba',
-      'hint': 'Rada',
-      'important': 'D\u00F4le\u017Eit\u00E9',
-      'note': 'Pozn\u00E1mka',
-      'tip': 'Tip',
-      'warning': 'Varovanie',
-      'contents': 'Obsah'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
-      'autor': 'author',
-      'autori': 'authors',
-      'organiz\u00E1cia': 'organization',
-      'adresa': 'address',
-      'kontakt': 'contact',
-      'verzia': 'version',
-      'rev\u00EDzia': 'revision',
-      'stav': 'status',
+directives = {
+      'pozor': 'attention',
+      'opatrne': 'caution',
+      'code (translation required)': 'code',
+      'nebezpe\xe8enstvo': 'danger',
+      'chyba': 'error',
+      'rada': 'hint',
+      'd\xf4le\x9eit\xe9': 'important',
+      'pozn\xe1mka': 'note',
+      'tip (translation required)': 'tip',
+      'varovanie': 'warning',
+      'admonition (translation required)': 'admonition',
+      'sidebar (translation required)': 'sidebar',
+      't\xe9ma': 'topic',
+      'blok-riadkov': 'line-block',
+      'parsed-literal': 'parsed-literal',
+      'rubric (translation required)': 'rubric',
+      'epigraph (translation required)': 'epigraph',
+      'highlights (translation required)': 'highlights',
+      'pull-quote (translation required)': 'pull-quote',
+      'compound (translation required)': 'compound',
+      'container (translation required)': 'container',
+      # 'questions': 'questions',
+      # 'qa': 'questions',
+      # 'faq': 'questions',
+      'table (translation required)': 'table',
+      'csv-table (translation required)': 'csv-table',
+      'list-table (translation required)': 'list-table',
+      'meta': 'meta',
+      'math (translation required)': 'math',
+      # 'imagemap': 'imagemap',
+      'obr\xe1zok': 'image',
+      'tvar': 'figure',
+      'vlo\x9ei\x9d': 'include',
+      'raw (translation required)': 'raw',
+      'nahradi\x9d': 'replace',
+      'unicode': 'unicode',
       'd\u00E1tum': 'date',
-      'copyright': 'copyright',
-      'venovanie': 'dedication',
-      'abstraktne': 'abstract'}
-"""Slovak (lowcased) to canonical name mapping for bibliographic fields."""
+      'class (translation required)': 'class',
+      'role (translation required)': 'role',
+      'default-role (translation required)': 'default-role',
+      'title (translation required)': 'title',
+      'obsah': 'contents',
+      '\xe8as\x9d': 'sectnum',
+      '\xe8as\x9d-\xe8\xedslovanie': 'sectnum',
+      'cie\xbeov\xe9-pozn\xe1mky': 'target-notes',
+      'header (translation required)': 'header',
+      'footer (translation required)': 'footer',
+      # 'footnotes': 'footnotes',
+      # 'citations': 'citations',
+      }
+"""Slovak name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+      'abbreviation (translation required)': 'abbreviation',
+      'acronym (translation required)': 'acronym',
+      'code (translation required)': 'code',
+      'index (translation required)': 'index',
+      'subscript (translation required)': 'subscript',
+      'superscript (translation required)': 'superscript',
+      'title-reference (translation required)': 'title-reference',
+      'pep-reference (translation required)': 'pep-reference',
+      'rfc-reference (translation required)': 'rfc-reference',
+      'emphasis (translation required)': 'emphasis',
+      'strong (translation required)': 'strong',
+      'literal (translation required)': 'literal',
+      'math (translation required)': 'math',
+      'named-reference (translation required)': 'named-reference',
+      'anonymous-reference (translation required)': 'anonymous-reference',
+      'footnote-reference (translation required)': 'footnote-reference',
+      'citation-reference (translation required)': 'citation-reference',
+      'substitution-reference (translation required)': 'substitution-reference',  # noqa:E501
+      'target (translation required)': 'target',
+      'uri-reference (translation required)': 'uri-reference',
+      'raw (translation required)': 'raw',
+      }
+"""Mapping of Slovak role names to canonical role names for interpreted text.
+"""

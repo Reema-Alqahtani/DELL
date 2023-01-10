@@ -8,53 +8,95 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Persian-language mappings for language-dependent features of Docutils.
+Persian-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      # fixed: language-dependent
-      'author': 'نویسنده',
-      'authors': 'نویسندگان',
-      'organization': 'سازمان',
-      'address': 'آدرس',
-      'contact': 'تماس',
-      'version': 'نسخه',
-      'revision': 'بازبینی',
-      'status': 'وضعیت',
-      'date': 'تاریخ',
-      'copyright': 'کپی‌رایت',
-      'dedication': 'تخصیص',
-      'abstract': 'چکیده',
-      'attention': 'توجه!',
-      'caution': 'احتیاط!',
-      'danger': 'خطر!',
-      'error': 'خطا',
-      'hint': 'راهنما',
-      'important': 'مهم',
-      'note': 'یادداشت',
-      'tip': 'نکته',
-      'warning': 'اخطار',
-      'contents': 'محتوا'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
-      # language-dependent: fixed
-      'نویسنده': 'author',
-      'نویسندگان': 'authors',
-      'سازمان': 'organization',
-      'آدرس': 'address',
-      'تماس': 'contact',
-      'نسخه': 'version',
-      'بازبینی': 'revision',
-      'وضعیت': 'status',
-      'تاریخ': 'date',
-      'کپی‌رایت': 'copyright',
-      'تخصیص': 'dedication',
-      'چکیده': 'abstract'}
-"""Persian (lowcased) to canonical name mapping for bibliographic fields."""
+directives = {
+    # language-dependent: fixed
+    'توجه': 'attention',
+    'احتیاط': 'caution',
+    'کد': 'code',
+    'بلوک-کد': 'code',
+    'کد-منبع': 'code',
+    'خطر': 'danger',
+    'خطا': 'error',
+    'راهنما': 'hint',
+    'مهم': 'important',
+    'یادداشت': 'note',
+    'نکته': 'tip',
+    'اخطار': 'warning',
+    'تذکر': 'admonition',
+    'نوار-کناری': 'sidebar',
+    'موضوع': 'topic',
+    'بلوک-خط': 'line-block',
+    'تلفظ-پردازش-شده': 'parsed-literal',
+    'سر-فصل': 'rubric',
+    'کتیبه': 'epigraph',
+    'نکات-برجسته': 'highlights',
+    'نقل-قول': 'pull-quote',
+    'ترکیب': 'compound',
+    'ظرف': 'container',
+    # 'questions': 'questions',
+    'جدول': 'table',
+    'جدول-csv': 'csv-table',
+    'جدول-لیست': 'list-table',
+    # 'qa': 'questions',
+    # 'faq': 'questions',
+    'متا': 'meta',
+    'ریاضی': 'math',
+    # 'imagemap': 'imagemap',
+    'تصویر': 'image',
+    'شکل': 'figure',
+    'شامل': 'include',
+    'خام': 'raw',
+    'جایگزین': 'replace',
+    'یونیکد': 'unicode',
+    'تاریخ': 'date',
+    'کلاس': 'class',
+    'قانون': 'role',
+    'قانون-پیش‌فرض': 'default-role',
+    'عنوان': 'title',
+    'محتوا': 'contents',
+    'شماره-فصل': 'sectnum',
+    'شماره‌گذاری-فصل': 'sectnum',
+    'سرآیند': 'header',
+    'پاصفحه': 'footer',
+    # 'footnotes': 'footnotes',
+    # 'citations': 'citations',
+    'یادداشت-هدف': 'target-notes',
+}
+"""Persian name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = ['؛', '،']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    # language-dependent: fixed
+    'مخفف': 'abbreviation',
+    'سرنام': 'acronym',
+    'کد': 'code',
+    'شاخص': 'index',
+    'زیرنویس': 'subscript',
+    'بالانویس': 'superscript',
+    'عنوان': 'title-reference',
+    'نیرو': 'pep-reference',
+    'rfc-reference (translation required)': 'rfc-reference',
+    'تاکید': 'emphasis',
+    'قوی': 'strong',
+    'لفظی': 'literal',
+    'ریاضی': 'math',
+    'منبع-نام‌گذاری': 'named-reference',
+    'منبع-ناشناس': 'anonymous-reference',
+    'منبع-پانویس': 'footnote-reference',
+    'منبع-نقل‌فول': 'citation-reference',
+    'منبع-جایگزینی': 'substitution-reference',
+    'هدف': 'target',
+    'منبع-uri': 'uri-reference',
+    'uri': 'uri-reference',
+    'url': 'uri-reference',
+    'خام': 'raw',
+}
+"""Mapping of Persian role names to canonical role names for interpreted text.
+"""

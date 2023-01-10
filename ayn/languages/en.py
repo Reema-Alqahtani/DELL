@@ -8,53 +8,104 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-English-language mappings for language-dependent features of Docutils.
+English-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      # fixed: language-dependent
-      'author': 'Author',
-      'authors': 'Authors',
-      'organization': 'Organization',
-      'address': 'Address',
-      'contact': 'Contact',
-      'version': 'Version',
-      'revision': 'Revision',
-      'status': 'Status',
-      'date': 'Date',
-      'copyright': 'Copyright',
-      'dedication': 'Dedication',
-      'abstract': 'Abstract',
-      'attention': 'Attention!',
-      'caution': 'Caution!',
-      'danger': '!DANGER!',
-      'error': 'Error',
-      'hint': 'Hint',
-      'important': 'Important',
-      'note': 'Note',
-      'tip': 'Tip',
-      'warning': 'Warning',
-      'contents': 'Contents'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
+directives = {
       # language-dependent: fixed
-      'author': 'author',
-      'authors': 'authors',
-      'organization': 'organization',
-      'address': 'address',
-      'contact': 'contact',
-      'version': 'version',
-      'revision': 'revision',
-      'status': 'status',
+      'attention': 'attention',
+      'caution': 'caution',
+      'code': 'code',
+      'code-block': 'code',
+      'sourcecode': 'code',
+      'danger': 'danger',
+      'error': 'error',
+      'hint': 'hint',
+      'important': 'important',
+      'note': 'note',
+      'tip': 'tip',
+      'warning': 'warning',
+      'admonition': 'admonition',
+      'sidebar': 'sidebar',
+      'topic': 'topic',
+      'line-block': 'line-block',
+      'parsed-literal': 'parsed-literal',
+      'rubric': 'rubric',
+      'epigraph': 'epigraph',
+      'highlights': 'highlights',
+      'pull-quote': 'pull-quote',
+      'compound': 'compound',
+      'container': 'container',
+      # 'questions': 'questions',
+      'table': 'table',
+      'csv-table': 'csv-table',
+      'list-table': 'list-table',
+      # 'qa': 'questions',
+      # 'faq': 'questions',
+      'meta': 'meta',
+      'math': 'math',
+      # 'imagemap': 'imagemap',
+      'image': 'image',
+      'figure': 'figure',
+      'include': 'include',
+      'raw': 'raw',
+      'replace': 'replace',
+      'unicode': 'unicode',
       'date': 'date',
-      'copyright': 'copyright',
-      'dedication': 'dedication',
-      'abstract': 'abstract'}
-"""English (lowcased) to canonical name mapping for bibliographic fields."""
+      'class': 'class',
+      'role': 'role',
+      'default-role': 'default-role',
+      'title': 'title',
+      'contents': 'contents',
+      'sectnum': 'sectnum',
+      'section-numbering': 'sectnum',
+      'header': 'header',
+      'footer': 'footer',
+      # 'footnotes': 'footnotes',
+      # 'citations': 'citations',
+      'target-notes': 'target-notes',
+      'restructuredtext-test-directive': 'restructuredtext-test-directive'}
+"""English name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    # language-dependent: fixed
+    'abbreviation': 'abbreviation',
+    'ab': 'abbreviation',
+    'acronym': 'acronym',
+    'ac': 'acronym',
+    'code': 'code',
+    'index': 'index',
+    'i': 'index',
+    'subscript': 'subscript',
+    'sub': 'subscript',
+    'superscript': 'superscript',
+    'sup': 'superscript',
+    'title-reference': 'title-reference',
+    'title': 'title-reference',
+    't': 'title-reference',
+    'pep-reference': 'pep-reference',
+    'pep': 'pep-reference',
+    'rfc-reference': 'rfc-reference',
+    'rfc': 'rfc-reference',
+    'emphasis': 'emphasis',
+    'strong': 'strong',
+    'literal': 'literal',
+    'math': 'math',
+    'named-reference': 'named-reference',
+    'anonymous-reference': 'anonymous-reference',
+    'footnote-reference': 'footnote-reference',
+    'citation-reference': 'citation-reference',
+    'substitution-reference': 'substitution-reference',
+    'target': 'target',
+    'uri-reference': 'uri-reference',
+    'uri': 'uri-reference',
+    'url': 'uri-reference',
+    'raw': 'raw',
+    }
+"""Mapping of English role names to canonical role names for interpreted text.
+"""

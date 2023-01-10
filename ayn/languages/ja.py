@@ -1,5 +1,5 @@
 # $Id: ja.py 9030 2022-03-05 23:28:32Z milde $
-# Author: Hisashi Morita <hisashim@kt.rim.or.jp>
+# Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
 # New language mappings are welcome.  Before doing a new translation, please
@@ -8,53 +8,112 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Japanese-language mappings for language-dependent features of Docutils.
+Japanese-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      # fixed: language-dependent
-      'author': '著者',
-      'authors': '著者',
-      'organization': '組織',
-      'address': '住所',
-      'contact': '連絡先',
-      'version': 'バージョン',
-      'revision': 'リビジョン',
-      'status': 'ステータス',
-      'date': '日付',
-      'copyright': '著作権',
-      'dedication': '献辞',
-      'abstract': '概要',
-      'attention': '注目!',
-      'caution': '注意!',
-      'danger': '!危険!',
-      'error': 'エラー',
-      'hint': 'ヒント',
-      'important': '重要',
-      'note': '備考',
-      'tip': '通報',
-      'warning': '警告',
-      'contents': '目次'}
-"""Mapping of node class name to label text."""
+# Corrections to these translations are welcome!
+# 間違いがあれば、どうぞ正しい翻訳を教えて下さい。
 
-bibliographic_fields = {
-      # language-dependent: fixed
-      '著者': 'author',
-      ' n/a': 'authors',
-      '組織': 'organization',
-      '住所': 'address',
-      '連絡先': 'contact',
-      'バージョン': 'version',
-      'リビジョン': 'revision',
-      'ステータス': 'status',
-      '日付': 'date',
-      '著作権': 'copyright',
-      '献辞': 'dedication',
-      '概要': 'abstract'}
-"""Japanese (lowcased) to canonical name mapping for bibliographic fields."""
+directives = {
+    # language-dependent: fixed
+    '注目': 'attention',
+    '注意': 'caution',
+    'code (translation required)': 'code',
+    '危険': 'danger',
+    'エラー': 'error',
+    'ヒント': 'hint',
+    '重要': 'important',
+    '備考': 'note',
+    '通報': 'tip',
+    '警告': 'warning',
+    '戒告': 'admonition',
+    'サイドバー': 'sidebar',
+    'トピック': 'topic',
+    'ラインブロック': 'line-block',
+    'パーズドリテラル': 'parsed-literal',
+    'ルブリック': 'rubric',
+    'エピグラフ': 'epigraph',
+    '題言': 'epigraph',
+    'ハイライト': 'highlights',
+    '見所': 'highlights',
+    'プルクオート': 'pull-quote',
+    '合成': 'compound',
+    'コンテナー': 'container',
+    '容器': 'container',
+    '表': 'table',
+    'csv表': 'csv-table',
+    'リスト表': 'list-table',
+    # '質問': 'questions',
+    # '問答': 'questions',
+    # 'faq': 'questions',
+    'math (translation required)': 'math',
+    'メタ': 'meta',
+    # 'イメージマプ': 'imagemap',
+    'イメージ': 'image',
+    '画像': 'image',
+    'フィグア': 'figure',
+    '図版': 'figure',
+    'インクルード': 'include',
+    '含む': 'include',
+    '組み込み': 'include',
+    '生': 'raw',
+    '原': 'raw',
+    '換える': 'replace',
+    '取り換える': 'replace',
+    '掛け替える': 'replace',
+    'ユニコード': 'unicode',
+    '日付': 'date',
+    'クラス': 'class',
+    'ロール': 'role',
+    '役': 'role',
+    'ディフォルトロール': 'default-role',
+    '既定役': 'default-role',
+    'タイトル': 'title',
+    '題': 'title',                       # 題名　件名
+    '目次': 'contents',
+    '節数': 'sectnum',
+    'ヘッダ': 'header',
+    'フッタ': 'footer',
+    # '脚注': 'footnotes',                # 脚註?
+    # 'サイテーション': 'citations',　　　# 出典　引証　引用
+    'ターゲットノート': 'target-notes',  # 的注　的脚注
+    }
+"""Japanese name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    # language-dependent: fixed
+    '略': 'abbreviation',
+    '頭字語': 'acronym',
+    'code (translation required)': 'code',
+    'インデックス': 'index',
+    '索引': 'index',
+    '添字': 'subscript',
+    '下付': 'subscript',
+    '下': 'subscript',
+    '上付': 'superscript',
+    '上': 'superscript',
+    '題参照': 'title-reference',
+    'pep参照': 'pep-reference',
+    'rfc参照': 'rfc-reference',
+    '強調': 'emphasis',
+    '強い': 'strong',
+    'リテラル': 'literal',
+    '整形済み': 'literal',
+    'math (translation required)': 'math',
+    '名付参照': 'named-reference',
+    '無名参照': 'anonymous-reference',
+    '脚注参照': 'footnote-reference',
+    '出典参照': 'citation-reference',
+    '代入参照': 'substitution-reference',
+    '的': 'target',
+    'uri参照': 'uri-reference',
+    'uri': 'uri-reference',
+    'url': 'uri-reference',
+    '生': 'raw',
+    }
+"""Mapping of Japanese role names to canonical role names for interpreted
+text."""

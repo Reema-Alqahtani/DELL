@@ -8,51 +8,83 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Russian-language mappings for language-dependent features of Docutils.
+Russian-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      'abstract': 'Аннотация',
-      'address': 'Адрес',
-      'attention': 'Внимание!',
-      'author': 'Автор',
-      'authors': 'Авторы',
-      'caution': 'Осторожно!',
-      'contact': 'Контакт',
-      'contents': 'Содержание',
-      'copyright': 'Права копирования',
-      'danger': 'ОПАСНО!',
-      'date': 'Дата',
-      'dedication': 'Посвящение',
-      'error': 'Ошибка',
-      'hint': 'Совет',
-      'important': 'Важно',
-      'note': 'Примечание',
-      'organization': 'Организация',
-      'revision': 'Редакция',
-      'status': 'Статус',
-      'tip': 'Подсказка',
-      'version': 'Версия',
-      'warning': 'Предупреждение'}
-"""Mapping of node class name to label text."""
+directives = {
+    'блок-строк': 'line-block',
+    'meta': 'meta',
+    'математика': 'math',
+    'обработанный-литерал': 'parsed-literal',
+    'выделенная-цитата': 'pull-quote',
+    'код': 'code',
+    'compound (translation required)': 'compound',
+    'контейнер': 'container',
+    'таблица': 'table',
+    'csv-table (translation required)': 'csv-table',
+    'list-table (translation required)': 'list-table',
+    'сырой': 'raw',
+    'замена': 'replace',
+    'тестовая-директива-restructuredtext': 'restructuredtext-test-directive',
+    'целевые-сноски': 'target-notes',
+    'unicode': 'unicode',
+    'дата': 'date',
+    'боковая-полоса': 'sidebar',
+    'важно': 'important',
+    'включать': 'include',
+    'внимание': 'attention',
+    'выделение': 'highlights',
+    'замечание': 'admonition',
+    'изображение': 'image',
+    'класс': 'class',
+    'роль': 'role',
+    'default-role (translation required)': 'default-role',
+    'титул': 'title',
+    'номер-раздела': 'sectnum',
+    'нумерация-разделов': 'sectnum',
+    'опасно': 'danger',
+    'осторожно': 'caution',
+    'ошибка': 'error',
+    'подсказка': 'tip',
+    'предупреждение': 'warning',
+    'примечание': 'note',
+    'рисунок': 'figure',
+    'рубрика': 'rubric',
+    'совет': 'hint',
+    'содержание': 'contents',
+    'тема': 'topic',
+    'эпиграф': 'epigraph',
+    'header (translation required)': 'header',
+    'footer (translation required)': 'footer',
+    }
+"""Russian name to registered (in directives/__init__.py) directive name
+mapping."""
 
-bibliographic_fields = {
-      'аннотация': 'abstract',
-      'адрес': 'address',
-      'автор': 'author',
-      'авторы': 'authors',
-      'контакт': 'contact',
-      'права копирования': 'copyright',
-      'дата': 'date',
-      'посвящение': 'dedication',
-      'организация': 'organization',
-      'редакция': 'revision',
-      'статус': 'status',
-      'версия': 'version'}
-"""Russian (lowcased) to canonical name mapping for bibliographic fields."""
-
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    'акроним': 'acronym',
+    'код': 'code',
+    'анонимная-ссылка': 'anonymous-reference',
+    'буквально': 'literal',
+    'математика': 'math',
+    'верхний-индекс': 'superscript',
+    'выделение': 'emphasis',
+    'именованная-ссылка': 'named-reference',
+    'индекс': 'index',
+    'нижний-индекс': 'subscript',
+    'сильное-выделение': 'strong',
+    'сокращение': 'abbreviation',
+    'ссылка-замена': 'substitution-reference',
+    'ссылка-на-pep': 'pep-reference',
+    'ссылка-на-rfc': 'rfc-reference',
+    'ссылка-на-uri': 'uri-reference',
+    'ссылка-на-заглавие': 'title-reference',
+    'ссылка-на-сноску': 'footnote-reference',
+    'цитатная-ссылка': 'citation-reference',
+    'цель': 'target',
+    'сырой': 'raw',
+    }
+"""Mapping of Russian role names to canonical role names for interpreted text.
+"""

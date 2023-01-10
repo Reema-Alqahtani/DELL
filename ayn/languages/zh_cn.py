@@ -1,5 +1,5 @@
 # $Id: zh_cn.py 9030 2022-03-05 23:28:32Z milde $
-# Author: Pan Junyong <panjy@zopechina.com>
+# Author: Panjunyong <panjy@zopechina.com>
 # Copyright: This module has been placed in the public domain.
 
 # New language mappings are welcome.  Before doing a new translation, please
@@ -8,59 +8,97 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Simplified Chinese language mappings for language-dependent features
-of Docutils.
+Simplified Chinese language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      # fixed: language-dependent
-      'author': '作者',
-      'authors': '作者群',
-      'organization': '组织',
-      'address': '地址',
-      'contact': '联系',
-      'version': '版本',
-      'revision': '修订',
-      'status': '状态',
-      'date': '日期',
-      'copyright': '版权',
-      'dedication': '献辞',
-      'abstract': '摘要',
-      'attention': '注意',
-      'caution': '小心',
-      'danger': '危险',
-      'error': '错误',
-      'hint': '提示',
-      'important': '重要',
-      'note': '注解',
-      'tip': '技巧',
-      'warning': '警告',
-      'contents': '目录',
-}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
+directives = {
       # language-dependent: fixed
-      '作者': 'author',
-      '作者群': 'authors',
-      '组织': 'organization',
-      '地址': 'address',
-      '联系': 'contact',
-      '版本': 'version',
-      '修订': 'revision',
-      '状态': 'status',
-      '时间': 'date',
-      '版权': 'copyright',
-      '献辞': 'dedication',
-      '摘要': 'abstract'}
-"""Simplified Chinese to canonical name mapping for bibliographic fields."""
+      '注意': 'attention',
+      '小心': 'caution',
+      'code (translation required)': 'code',
+      '危险': 'danger',
+      '错误': 'error',
+      '提示': 'hint',
+      '重要': 'important',
+      '注解': 'note',
+      '技巧': 'tip',
+      '警告': 'warning',
+      '忠告': 'admonition',
+      '侧框': 'sidebar',
+      '主题': 'topic',
+      'line-block (translation required)': 'line-block',
+      'parsed-literal (translation required)': 'parsed-literal',
+      '醒目': 'rubric',
+      '铭文': 'epigraph',
+      '要点': 'highlights',
+      'pull-quote (translation required)': 'pull-quote',
+      '复合': 'compound',
+      '容器': 'container',
+      # 'questions (translation required)': 'questions',
+      '表格': 'table',
+      'csv表格': 'csv-table',
+      '列表表格': 'list-table',
+      # 'qa (translation required)': 'questions',
+      # 'faq (translation required)': 'questions',
+      '元数据': 'meta',
+      'math (translation required)': 'math',
+      # 'imagemap (translation required)': 'imagemap',
+      '图片': 'image',
+      '图例': 'figure',
+      '包含': 'include',
+      '原文': 'raw',
+      '代替': 'replace',
+      '统一码': 'unicode',
+      '日期': 'date',
+      '类型': 'class',
+      '角色': 'role',
+      '默认角色': 'default-role',
+      '标题': 'title',
+      '目录': 'contents',
+      '章节序号': 'sectnum',
+      '题头': 'header',
+      '页脚': 'footer',
+      # 'footnotes (translation required)': 'footnotes',
+      # 'citations (translation required)': 'citations',
+      'target-notes (translation required)': 'target-notes',
+      'restructuredtext-test-directive': 'restructuredtext-test-directive'}
+"""Simplified Chinese name to registered (in directives/__init__.py)
+directive name mapping."""
 
-author_separators = [';', ',',
-                     '\uff1b',  # '；'
-                     '\uff0c',  # '，'
-                     '\u3001',  # '、'
-                     ]
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    # language-dependent: fixed
+    '缩写': 'abbreviation',
+    '简称': 'acronym',
+    'code (translation required)': 'code',
+    'index (translation required)': 'index',
+    'i (translation required)': 'index',
+    '下标': 'subscript',
+    '上标': 'superscript',
+    'title-reference (translation required)': 'title-reference',
+    'title (translation required)': 'title-reference',
+    't (translation required)': 'title-reference',
+    'pep-reference (translation required)': 'pep-reference',
+    'pep (translation required)': 'pep-reference',
+    'rfc-reference (translation required)': 'rfc-reference',
+    'rfc (translation required)': 'rfc-reference',
+    '强调': 'emphasis',
+    '加粗': 'strong',
+    '字面': 'literal',
+    'math (translation required)': 'math',
+    'named-reference (translation required)': 'named-reference',
+    'anonymous-reference (translation required)': 'anonymous-reference',
+    'footnote-reference (translation required)': 'footnote-reference',
+    'citation-reference (translation required)': 'citation-reference',
+    'substitution-reference (translation required)': 'substitution-reference',
+    'target (translation required)': 'target',
+    'uri-reference (translation required)': 'uri-reference',
+    'uri (translation required)': 'uri-reference',
+    'url (translation required)': 'uri-reference',
+    'raw (translation required)': 'raw',
+    }
+"""Mapping of Simplified Chinese role names to canonical role names
+for interpreted text."""

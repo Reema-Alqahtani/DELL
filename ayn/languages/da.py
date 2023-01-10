@@ -8,54 +8,106 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Danish-language mappings for language-dependent features of Docutils.
+Danish-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      # fixed: language-dependent
-      'author': 'Forfatter',
-      'authors': 'Forfattere',
-      'organization': 'Organisation',
-      'address': 'Adresse',
-      'contact': 'Kontakt',
-      'version': 'Version',
-      'revision': 'Revision',
-      'status': 'Status',
-      'date': 'Dato',
-      'copyright': 'Copyright',
-      'dedication': 'Dedikation',
-      'abstract': 'Resumé',
-      'attention': 'Giv agt!',
-      'caution': 'Pas på!',
-      'danger': '!FARE!',
-      'error': 'Fejl',
-      'hint': 'Vink',
-      'important': 'Vigtigt',
-      'note': 'Bemærk',
-      'tip': 'Tips',
-      'warning': 'Advarsel',
-      'contents': 'Indhold'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
+directives = {
       # language-dependent: fixed
-      'forfatter': 'author',
-      'forfattere': 'authors',
-      'organisation': 'organization',
-      'adresse': 'address',
-      'kontakt': 'contact',
-      'version': 'version',
-      'revision': 'revision',
-      'status': 'status',
+      'giv agt': 'attention',
+      'pas på': 'caution',
+      'kode': 'code',
+      'kode-blok': 'code',
+      'kildekode': 'code',
+      'fare': 'danger',
+      'fejl': 'error',
+      'vink': 'hint',
+      'vigtigt': 'important',
+      'bemærk': 'note',
+      'tips': 'tip',
+      'advarsel': 'warning',
+      'formaning': 'admonition',
+      'sidebjælke': 'sidebar',
+      'emne': 'topic',
+      'linje-blok': 'line-block',
+      'linie-blok': 'line-block',
+      'parset-literal': 'parsed-literal',
+      'rubrik': 'rubric',
+      'epigraf': 'epigraph',
+      'fremhævninger': 'highlights',
+      'pull-quote (translation required)': 'pull-quote',
+      'compound (translation required)': 'compound',
+      'container (translation required)': 'container',
+      # 'questions': 'questions',
+      'tabel': 'table',
+      'csv-tabel': 'csv-table',
+      'liste-tabel': 'list-table',
+      # 'qa': 'questions',
+      # 'faq': 'questions',
+      'meta': 'meta',
+      'math (translation required)': 'math',
+      # 'imagemap': 'imagemap',
+      'billede': 'image',
+      'figur': 'figure',
+      'inkludér': 'include',
+      'inkluder': 'include',
+      'rå': 'raw',
+      'erstat': 'replace',
+      'unicode': 'unicode',
       'dato': 'date',
-      'copyright': 'copyright',
-      'dedikation': 'dedication',
-      'resume': 'abstract',
-      'resumé': 'abstract'}
-"""Danish (lowcased) to canonical name mapping for bibliographic fields."""
+      'klasse': 'class',
+      'rolle': 'role',
+      'forvalgt-rolle': 'default-role',
+      'titel': 'title',
+      'indhold': 'contents',
+      'sektnum': 'sectnum',
+      'sektions-nummerering': 'sectnum',
+      'sidehovede': 'header',
+      'sidefod': 'footer',
+      # 'footnotes': 'footnotes',
+      # 'citations': 'citations',
+      'target-notes (translation required)': 'target-notes',
+      'restructuredtext-test-direktiv': 'restructuredtext-test-directive'}
+"""Danish name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    # language-dependent: fixed
+    'forkortelse': 'abbreviation',
+    'fork': 'abbreviation',
+    'akronym': 'acronym',
+    'ac (translation required)': 'acronym',
+    'kode': 'code',
+    'indeks': 'index',
+    'i': 'index',
+    'subscript (translation required)': 'subscript',
+    'sub (translation required)': 'subscript',
+    'superscript (translation required)': 'superscript',
+    'sup (translation required)': 'superscript',
+    'titel-reference': 'title-reference',
+    'titel': 'title-reference',
+    't': 'title-reference',
+    'pep-reference': 'pep-reference',
+    'pep': 'pep-reference',
+    'rfc-reference': 'rfc-reference',
+    'rfc': 'rfc-reference',
+    'emfase': 'emphasis',
+    'kraftig': 'strong',
+    'literal': 'literal',
+    'math (translation required)': 'math',
+    'navngivet-reference': 'named-reference',
+    'anonym-reference': 'anonymous-reference',
+    'fodnote-reference': 'footnote-reference',
+    'citation-reference (translation required)': 'citation-reference',
+    'substitutions-reference': 'substitution-reference',
+    'target (translation required)': 'target',
+    'uri-reference': 'uri-reference',
+    'uri': 'uri-reference',
+    'url': 'uri-reference',
+    'rå': 'raw',
+    }
+"""Mapping of Danish role names to canonical role names for interpreted text.
+"""

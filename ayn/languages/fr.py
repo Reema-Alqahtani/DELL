@@ -1,5 +1,5 @@
 # $Id: fr.py 9030 2022-03-05 23:28:32Z milde $
-# Author: Stefane Fermigier <sf@fermigier.com>
+# Authors: David Goodger <goodger@python.org>; William Dode
 # Copyright: This module has been placed in the public domain.
 
 # New language mappings are welcome.  Before doing a new translation, please
@@ -8,51 +8,97 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-French-language mappings for language-dependent features of Docutils.
+French-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      'author': 'Auteur',
-      'authors': 'Auteurs',
-      'organization': 'Organisation',
-      'address': 'Adresse',
-      'contact': 'Contact',
-      'version': 'Version',
-      'revision': 'R\u00e9vision',
-      'status': 'Statut',
-      'date': 'Date',
-      'copyright': 'Copyright',
-      'dedication': 'D\u00e9dicace',
-      'abstract': 'R\u00e9sum\u00e9',
-      'attention': 'Attention!',
-      'caution': 'Avertissement!',
-      'danger': '!DANGER!',
-      'error': 'Erreur',
-      'hint': 'Indication',
-      'important': 'Important',
-      'note': 'Note',
-      'tip': 'Astuce',
-      'warning': 'Avis',
-      'contents': 'Sommaire'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
-      'auteur': 'author',
-      'auteurs': 'authors',
-      'organisation': 'organization',
-      'adresse': 'address',
-      'contact': 'contact',
-      'version': 'version',
-      'r\u00e9vision': 'revision',
-      'statut': 'status',
+directives = {
+      'attention': 'attention',
+      'pr\u00E9caution': 'caution',
+      'code': 'code',
+      'danger': 'danger',
+      'erreur': 'error',
+      'conseil': 'hint',
+      'important': 'important',
+      'note': 'note',
+      'astuce': 'tip',
+      'avertissement': 'warning',
+      'admonition': 'admonition',
+      'encadr\u00E9': 'sidebar',
+      'sujet': 'topic',
+      'bloc-textuel': 'line-block',
+      'bloc-interpr\u00E9t\u00E9': 'parsed-literal',
+      'code-interpr\u00E9t\u00E9': 'parsed-literal',
+      'intertitre': 'rubric',
+      'exergue': 'epigraph',
+      '\u00E9pigraphe': 'epigraph',
+      'chapeau': 'highlights',
+      'accroche': 'pull-quote',
+      'compound (translation required)': 'compound',
+      'container (translation required)': 'container',
+      # 'questions': 'questions',
+      # 'qr': 'questions',
+      # 'faq': 'questions',
+      'tableau': 'table',
+      'csv-table (translation required)': 'csv-table',
+      'list-table (translation required)': 'list-table',
+      'm\u00E9ta': 'meta',
+      'math (translation required)': 'math',
+      # 'imagemap (translation required)': 'imagemap',
+      'image': 'image',
+      'figure': 'figure',
+      'inclure': 'include',
+      'brut': 'raw',
+      'remplacer': 'replace',
+      'remplace': 'replace',
+      'unicode': 'unicode',
       'date': 'date',
-      'copyright': 'copyright',
-      'd\u00e9dicace': 'dedication',
-      'r\u00e9sum\u00e9': 'abstract'}
-"""French (lowcased) to canonical name mapping for bibliographic fields."""
+      'classe': 'class',
+      'role (translation required)': 'role',
+      'default-role (translation required)': 'default-role',
+      'titre (translation required)': 'title',
+      'sommaire': 'contents',
+      'table-des-mati\u00E8res': 'contents',
+      'sectnum': 'sectnum',
+      'section-num\u00E9rot\u00E9e': 'sectnum',
+      'liens': 'target-notes',
+      'header (translation required)': 'header',
+      'footer (translation required)': 'footer',
+      # 'footnotes (translation required)': 'footnotes',
+      # 'citations (translation required)': 'citations',
+      }
+"""French name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+      'abr\u00E9viation': 'abbreviation',
+      'acronyme': 'acronym',
+      'sigle': 'acronym',
+      'code': 'code',
+      'index': 'index',
+      'indice': 'subscript',
+      'ind': 'subscript',
+      'exposant': 'superscript',
+      'exp': 'superscript',
+      'titre-r\u00E9f\u00E9rence': 'title-reference',
+      'titre': 'title-reference',
+      'pep-r\u00E9f\u00E9rence': 'pep-reference',
+      'rfc-r\u00E9f\u00E9rence': 'rfc-reference',
+      'emphase': 'emphasis',
+      'fort': 'strong',
+      'litt\u00E9ral': 'literal',
+      'math (translation required)': 'math',
+      'nomm\u00E9e-r\u00E9f\u00E9rence': 'named-reference',
+      'anonyme-r\u00E9f\u00E9rence': 'anonymous-reference',
+      'note-r\u00E9f\u00E9rence': 'footnote-reference',
+      'citation-r\u00E9f\u00E9rence': 'citation-reference',
+      'substitution-r\u00E9f\u00E9rence': 'substitution-reference',
+      'lien': 'target',
+      'uri-r\u00E9f\u00E9rence': 'uri-reference',
+      'brut': 'raw',
+      }
+"""Mapping of French role names to canonical role names for interpreted text.
+"""

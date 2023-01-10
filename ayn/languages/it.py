@@ -1,58 +1,98 @@
-# $Id: it.py 9030 2022-03-05 23:28:32Z milde $
-# Author: Nicola Larosa <docutils@tekNico.net>
+# $Id: it.py 9022 2022-03-04 15:54:56Z milde $
+# Authors: Nicola Larosa <docutils@tekNico.net>;
+#          Lele Gaifax <lele@seldati.it>
 # Copyright: This module has been placed in the public domain.
 
-# New language mappings are welcome.  Before doing a new translation, please
-# read <https://docutils.sourceforge.io/docs/howto/i18n.html>.
-# Two files must be translated for each language: one in docutils/languages,
-# the other in docutils/parsers/rst/languages.
+# Beware: the italian translation of the reStructuredText documentation
+# at http://docit.bice.dyndns.org/static/ReST, in particular
+# http://docit.bice.dyndns.org/static/ReST/ref/rst/directives.html, needs
+# to be synced with the content of this file.
 
 """
-Italian-language mappings for language-dependent features of Docutils.
+Italian-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      'author': 'Autore',
-      'authors': 'Autori',
-      'organization': 'Organizzazione',
-      'address': 'Indirizzo',
-      'contact': 'Contatti',
-      'version': 'Versione',
-      'revision': 'Revisione',
-      'status': 'Status',
-      'date': 'Data',
-      'copyright': 'Copyright',
-      'dedication': 'Dedica',
-      'abstract': 'Riassunto',
-      'attention': 'Attenzione!',
-      'caution': 'Cautela!',
-      'danger': '!PERICOLO!',
-      'error': 'Errore',
-      'hint': 'Suggerimento',
-      'important': 'Importante',
-      'note': 'Nota',
-      'tip': 'Consiglio',
-      'warning': 'Avvertenza',
-      'contents': 'Indice'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
-      'autore': 'author',
-      'autori': 'authors',
-      'organizzazione': 'organization',
-      'indirizzo': 'address',
-      'contatto': 'contact',
-      'versione': 'version',
-      'revisione': 'revision',
-      'status': 'status',
+directives = {
+      'attenzione': 'attention',
+      'cautela': 'caution',
+      'code (translation required)': 'code',
+      'pericolo': 'danger',
+      'errore': 'error',
+      'suggerimento': 'hint',
+      'importante': 'important',
+      'nota': 'note',
+      'consiglio': 'tip',
+      'avvertenza': 'warning',
+      'ammonizione': 'admonition',
+      'riquadro': 'sidebar',
+      'argomento': 'topic',
+      'blocco-di-righe': 'line-block',
+      'blocco-interpretato': 'parsed-literal',
+      'rubrica': 'rubric',
+      'epigrafe': 'epigraph',
+      'punti-salienti': 'highlights',
+      'estratto-evidenziato': 'pull-quote',
+      'composito': 'compound',
+      'container (translation required)': 'container',
+      # 'questions': 'questions',
+      # 'qa': 'questions',
+      # 'faq': 'questions',
+      'tabella': 'table',
+      'tabella-csv': 'csv-table',
+      'tabella-elenco': 'list-table',
+      'meta': 'meta',
+      'math (translation required)': 'math',
+      # 'imagemap': 'imagemap',
+      'immagine': 'image',
+      'figura': 'figure',
+      'includi': 'include',
+      'grezzo': 'raw',
+      'sostituisci': 'replace',
+      'unicode': 'unicode',
       'data': 'date',
-      'copyright': 'copyright',
-      'dedica': 'dedication',
-      'riassunto': 'abstract'}
-"""Italian (lowcased) to canonical name mapping for bibliographic fields."""
+      'classe': 'class',
+      'ruolo': 'role',
+      'ruolo-predefinito': 'default-role',
+      'titolo': 'title',
+      'indice': 'contents',
+      'contenuti': 'contents',
+      'seznum': 'sectnum',
+      'sezioni-autonumerate': 'sectnum',
+      'annota-riferimenti-esterni': 'target-notes',
+      'intestazione': 'header',
+      'piede-pagina': 'footer',
+      # 'footnotes': 'footnotes',
+      # 'citations': 'citations',
+      'restructuredtext-test-directive': 'restructuredtext-test-directive'}
+"""Italian name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+      'abbreviazione': 'abbreviation',
+      'acronimo': 'acronym',
+      'code (translation required)': 'code',
+      'indice': 'index',
+      'deponente': 'subscript',
+      'esponente': 'superscript',
+      'riferimento-titolo': 'title-reference',
+      'riferimento-pep': 'pep-reference',
+      'riferimento-rfc': 'rfc-reference',
+      'enfasi': 'emphasis',
+      'forte': 'strong',
+      'letterale': 'literal',
+      'math (translation required)': 'math',
+      'riferimento-con-nome': 'named-reference',
+      'riferimento-anonimo': 'anonymous-reference',
+      'riferimento-nota': 'footnote-reference',
+      'riferimento-citazione': 'citation-reference',
+      'riferimento-sostituzione': 'substitution-reference',
+      'destinazione': 'target',
+      'riferimento-uri': 'uri-reference',
+      'grezzo': 'raw',
+      }
+"""Mapping of Italian role names to canonical role names for interpreted text.
+"""

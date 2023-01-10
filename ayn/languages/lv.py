@@ -7,53 +7,102 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Latvian-language mappings for language-dependent features of Docutils.
+Latvian-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      # fixed: language-dependent
-      'author': 'Autors',
-      'authors': 'Autori',
-      'organization': 'Organizācija',
-      'address': 'Adrese',
-      'contact': 'Kontakti',
-      'version': 'Versija',
-      'revision': 'Revīzija',
-      'status': 'Statuss',
-      'date': 'Datums',
-      'copyright': 'Copyright',
-      'dedication': 'Veltījums',
-      'abstract': 'Atreferējums',
-      'attention': 'Uzmanību!',
-      'caution': 'Piesardzību!',
-      'danger': '!BĪSTAMI!',
-      'error': 'Kļūda',
-      'hint': 'Ieteikums',
-      'important': 'Svarīgi',
-      'note': 'Piezīme',
-      'tip': 'Padoms',
-      'warning': 'Brīdinājums',
-      'contents': 'Saturs'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
+directives = {
       # language-dependent: fixed
-      'autors': 'author',
-      'autori': 'authors',
-      'organizācija': 'organization',
-      'adrese': 'address',
-      'kontakti': 'contact',
-      'versija': 'version',
-      'revīzija': 'revision',
-      'statuss': 'status',
+      'uzmanību': 'attention',
+      'piesardzību': 'caution',
+      'kods': 'code',
+      'koda-bloks': 'code',
+      'pirmkods': 'code',
+      'bīstami': 'danger',
+      'kļūda': 'error',
+      'ieteikums': 'hint',
+      'svarīgi': 'important',
+      'piezīme': 'note',
+      'padoms': 'tip',
+      'brīdinājums': 'warning',
+      'aizrādījums': 'admonition',
+      'sānjosla': 'sidebar',
+      'tēma': 'topic',
+      'rindu-bloks': 'line-block',
+      'parsēts-literālis': 'parsed-literal',
+      'rubrika': 'rubric',
+      'epigrāfs': 'epigraph',
+      'apskats': 'highlights',
+      'izvilkuma-citāts': 'pull-quote',
+      'savienojums': 'compound',
+      'konteiners': 'container',
+      # 'questions': 'questions',
+      'tabula': 'table',
+      'csv-tabula': 'csv-table',
+      'sarakstveida-tabula': 'list-table',
+      # 'qa': 'questions',
+      # 'faq': 'questions',
+      'meta': 'meta',
+      'matemātika': 'math',
+      # 'imagemap': 'imagemap',
+      'attēls': 'image',
+      'figūra': 'figure',
+      'ietvert': 'include',
+      'burtiski': 'raw',
+      'aizvieto': 'replace',
+      'unicode': 'unicode',
       'datums': 'date',
-      'copyright': 'copyright',
-      'veltījums': 'dedication',
-      'atreferējums': 'abstract'}
-"""English (lowcased) to canonical name mapping for bibliographic fields."""
+      'klase': 'class',
+      'role': 'role',
+      'noklusējuma-role': 'default-role',
+      'virsraksts': 'title',
+      'saturs': 'contents',
+      'numurēt-sekcijas': 'sectnum',
+      'galvene': 'header',
+      'kājene': 'footer',
+      # 'footnotes': 'footnotes',
+      # 'citations': 'citations',
+      'atsauces-apakšā': 'target-notes',
+      'restructuredtext-testa-direktīva': 'restructuredtext-test-directive'}
+"""English name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    # language-dependent: fixed
+    'saīsinājums': 'abbreviation',
+    'īsi': 'abbreviation',
+    'akronīms': 'acronym',
+    'kods': 'code',
+    'indekss': 'index',
+    'i': 'index',
+    'apakšraksts': 'subscript',
+    'apakšā': 'subscript',
+    'augšraksts': 'superscript',
+    'augšā': 'superscript',
+    'virsraksta-atsauce': 'title-reference',
+    'virsraksts': 'title-reference',
+    'v': 'title-reference',
+    'atsauce-uz-pep': 'pep-reference',
+    'pep': 'pep-reference',
+    'atsauce-uz-rfc': 'rfc-reference',
+    'rfc': 'rfc-reference',
+    'izcēlums': 'emphasis',
+    'blīvs': 'strong',
+    'literālis': 'literal',
+    'matemātika': 'math',
+    'nosaukta-atsauce': 'named-reference',
+    'nenosaukta-atsauce': 'anonymous-reference',
+    'kājenes-atsauce': 'footnote-reference',
+    'citātā-atsauce': 'citation-reference',
+    'aizvietojuma-atsauce': 'substitution-reference',
+    'mēr''kis': 'target',
+    'atsauce-uz-uri': 'uri-reference',
+    'uri': 'uri-reference',
+    'url': 'uri-reference',
+    'burtiski': 'raw',
+    }
+"""Mapping of English role names to canonical role names for interpreted text.
+"""

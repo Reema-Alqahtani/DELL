@@ -8,54 +8,111 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Esperanto-language mappings for language-dependent features of Docutils.
+Esperanto-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      # fixed: language-dependent
-      'author': 'A\u016dtoro',
-      'authors': 'A\u016dtoroj',
-      'organization': 'Organizo',
-      'address': 'Adreso',
-      'contact': 'Kontakto',
-      'version': 'Versio',
-      'revision': 'Revido',
-      'status': 'Stato',
-      'date': 'Dato',
-      # 'copyright': 'Kopirajto',
-      'copyright': 'A\u016dtorrajto',
-      'dedication': 'Dedi\u0109o',
-      'abstract': 'Resumo',
-      'attention': 'Atentu!',
-      'caution': 'Zorgu!',
-      'danger': 'DAN\u011cERO!',
-      'error': 'Eraro',
-      'hint': 'Spuro',
-      'important': 'Grava',
-      'note': 'Noto',
-      'tip': 'Helpeto',
-      'warning': 'Averto',
-      'contents': 'Enhavo'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
+directives = {
       # language-dependent: fixed
-      'a\u016dtoro': 'author',
-      'a\u016dtoroj': 'authors',
-      'organizo': 'organization',
-      'adreso': 'address',
-      'kontakto': 'contact',
-      'versio': 'version',
-      'revido': 'revision',
-      'stato': 'status',
+      'atentu': 'attention',
+      'zorgu': 'caution',
+      'code (translation required)': 'code',
+      'dangxero': 'danger',
+      'dan\u011dero': 'danger',
+      'eraro': 'error',
+      'spuro': 'hint',
+      'grava': 'important',
+      'noto': 'note',
+      'helpeto': 'tip',
+      'averto': 'warning',
+      'admono': 'admonition',
+      'flankteksto': 'sidebar',
+      'temo': 'topic',
+      'linea-bloko': 'line-block',
+      'analizota-literalo': 'parsed-literal',
+      'rubriko': 'rubric',
+      'epigrafo': 'epigraph',
+      'elstarajxoj': 'highlights',
+      'elstara\u0135oj': 'highlights',
+      'ekstera-citajxo': 'pull-quote',
+      'ekstera-cita\u0135o': 'pull-quote',
+      'kombinajxo': 'compound',
+      'kombina\u0135o': 'compound',
+      'tekstingo': 'container',
+      'enhavilo': 'container',
+      # 'questions': 'questions',
+      # 'qa': 'questions',
+      # 'faq': 'questions',
+      'tabelo': 'table',
+      'tabelo-vdk': 'csv-table',  # "valoroj disigitaj per komoj"
+      'tabelo-csv': 'csv-table',
+      'tabelo-lista': 'list-table',
+      'meta': 'meta',
+      'math (translation required)': 'math',
+      # 'imagemap': 'imagemap',
+      'bildo': 'image',
+      'figuro': 'figure',
+      'inkludi': 'include',
+      'senanaliza': 'raw',
+      'anstatauxi': 'replace',
+      'anstata\u016di': 'replace',
+      'unicode': 'unicode',
       'dato': 'date',
-      'a\u016dtorrajto': 'copyright',
-      'dedi\u0109o': 'dedication',
-      'resumo': 'abstract'}
-"""Esperanto (lowcased) to canonical name mapping for bibliographic fields."""
+      'klaso': 'class',
+      'rolo': 'role',
+      'preterlasita-rolo': 'default-role',
+      'titolo': 'title',
+      'enhavo': 'contents',
+      'seknum': 'sectnum',
+      'sekcia-numerado': 'sectnum',
+      'kapsekcio': 'header',
+      'piedsekcio': 'footer',
+      # 'footnotes': 'footnotes',
+      # 'citations': 'citations',
+      'celaj-notoj': 'target-notes',
+      'restructuredtext-test-directive': 'restructuredtext-test-directive'}
+"""Esperanto name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    # language-dependent: fixed
+    'mallongigo': 'abbreviation',
+    'mall': 'abbreviation',
+    'komenclitero': 'acronym',
+    'kl': 'acronym',
+    'code (translation required)': 'code',
+    'indekso': 'index',
+    'i': 'index',
+    'subskribo': 'subscript',
+    'sub': 'subscript',
+    'supraskribo': 'superscript',
+    'sup': 'superscript',
+    'titola-referenco': 'title-reference',
+    'titolo': 'title-reference',
+    't': 'title-reference',
+    'pep-referenco': 'pep-reference',
+    'pep': 'pep-reference',
+    'rfc-referenco': 'rfc-reference',
+    'rfc': 'rfc-reference',
+    'emfazo': 'emphasis',
+    'forta': 'strong',
+    'litera': 'literal',
+    'math (translation required)': 'math',
+    'nomita-referenco': 'named-reference',
+    'nenomita-referenco': 'anonymous-reference',
+    'piednota-referenco': 'footnote-reference',
+    'citajxo-referenco': 'citation-reference',
+    'cita\u0135o-referenco': 'citation-reference',
+    'anstatauxa-referenco': 'substitution-reference',
+    'anstata\u016da-referenco': 'substitution-reference',
+    'celo': 'target',
+    'uri-referenco': 'uri-reference',
+    'uri': 'uri-reference',
+    'url': 'uri-reference',
+    'senanaliza': 'raw',
+}
+"""Mapping of Esperanto role names to canonical names for interpreted text.
+"""

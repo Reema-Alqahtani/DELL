@@ -8,53 +8,91 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Finnish-language mappings for language-dependent features of Docutils.
+Finnish-language mappings for language-dependent features of
+reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-      # fixed: language-dependent
-      'author': 'Tekij\u00e4',
-      'authors': 'Tekij\u00e4t',
-      'organization': 'Yhteis\u00f6',
-      'address': 'Osoite',
-      'contact': 'Yhteystiedot',
-      'version': 'Versio',
-      'revision': 'Vedos',
-      'status': 'Tila',
-      'date': 'P\u00e4iv\u00e4ys',
-      'copyright': 'Tekij\u00e4noikeudet',
-      'dedication': 'Omistuskirjoitus',
-      'abstract': 'Tiivistelm\u00e4',
-      'attention': 'Huomio!',
-      'caution': 'Varo!',
-      'danger': '!VAARA!',
-      'error': 'Virhe',
-      'hint': 'Vihje',
-      'important': 'T\u00e4rke\u00e4\u00e4',
-      'note': 'Huomautus',
-      'tip': 'Neuvo',
-      'warning': 'Varoitus',
-      'contents': 'Sis\u00e4llys'}
-"""Mapping of node class name to label text."""
 
-bibliographic_fields = {
+directives = {
       # language-dependent: fixed
-      'tekij\u00e4': 'author',
-      'tekij\u00e4t': 'authors',
-      'yhteis\u00f6': 'organization',
-      'osoite': 'address',
-      'yhteystiedot': 'contact',
-      'versio': 'version',
-      'vedos': 'revision',
-      'tila': 'status',
+      'huomio': 'attention',
+      'varo': 'caution',
+      'code (translation required)': 'code',
+      'vaara': 'danger',
+      'virhe': 'error',
+      'vihje': 'hint',
+      't\u00e4rke\u00e4\u00e4': 'important',
+      'huomautus': 'note',
+      'neuvo': 'tip',
+      'varoitus': 'warning',
+      'kehotus': 'admonition',
+      'sivupalkki': 'sidebar',
+      'aihe': 'topic',
+      'rivi': 'line-block',
+      'tasalevyinen': 'parsed-literal',
+      'ohje': 'rubric',
+      'epigraafi': 'epigraph',
+      'kohokohdat': 'highlights',
+      'lainaus': 'pull-quote',
+      'taulukko': 'table',
+      'csv-taulukko': 'csv-table',
+      'list-table (translation required)': 'list-table',
+      'compound (translation required)': 'compound',
+      'container (translation required)': 'container',
+      # 'kysymykset': 'questions',
+      'meta': 'meta',
+      'math (translation required)': 'math',
+      # 'kuvakartta': 'imagemap',
+      'kuva': 'image',
+      'kaavio': 'figure',
+      'sis\u00e4llyt\u00e4': 'include',
+      'raaka': 'raw',
+      'korvaa': 'replace',
+      'unicode': 'unicode',
       'p\u00e4iv\u00e4ys': 'date',
-      'tekij\u00e4noikeudet': 'copyright',
-      'omistuskirjoitus': 'dedication',
-      'tiivistelm\u00e4': 'abstract'}
-"""Finnish (lowcased) to canonical name mapping for bibliographic fields."""
+      'luokka': 'class',
+      'rooli': 'role',
+      'default-role (translation required)': 'default-role',
+      'title (translation required)': 'title',
+      'sis\u00e4llys': 'contents',
+      'kappale': 'sectnum',
+      'header (translation required)': 'header',
+      'footer (translation required)': 'footer',
+      # 'alaviitteet': 'footnotes',
+      # 'viitaukset': 'citations',
+      'target-notes (translation required)': 'target-notes'}
+"""Finnish name to registered (in directives/__init__.py) directive name
+mapping."""
 
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+    # language-dependent: fixed
+    'lyhennys': 'abbreviation',
+    'akronyymi': 'acronym',
+    'kirjainsana': 'acronym',
+    'code (translation required)': 'code',
+    'hakemisto': 'index',
+    'luettelo': 'index',
+    'alaindeksi': 'subscript',
+    'indeksi': 'subscript',
+    'yl\u00e4indeksi': 'superscript',
+    'title-reference (translation required)': 'title-reference',
+    'title (translation required)': 'title-reference',
+    'pep-reference (translation required)': 'pep-reference',
+    'rfc-reference (translation required)': 'rfc-reference',
+    'korostus': 'emphasis',
+    'vahvistus': 'strong',
+    'tasalevyinen': 'literal',
+    'math (translation required)': 'math',
+    'named-reference (translation required)': 'named-reference',
+    'anonymous-reference (translation required)': 'anonymous-reference',
+    'footnote-reference (translation required)': 'footnote-reference',
+    'citation-reference (translation required)': 'citation-reference',
+    'substitution-reference (translation required)': 'substitution-reference',
+    'kohde': 'target',
+    'uri-reference (translation required)': 'uri-reference',
+    'raw (translation required)': 'raw',
+    }
+"""Mapping of Finnish role names to canonical role names for interpreted text.
+"""

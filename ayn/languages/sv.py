@@ -8,52 +8,89 @@
 # the other in docutils/parsers/rst/languages.
 
 """
-Swedish language mappings for language-dependent features of Docutils.
+Swedish language mappings for language-dependent features of reStructuredText.
 """
 
 __docformat__ = 'reStructuredText'
 
-labels = {
-    'author': 'Författare',
-    'authors': 'Författare',
-    'organization': 'Organisation',
-    'address': 'Adress',
-    'contact': 'Kontakt',
-    'version': 'Version',
-    'revision': 'Revision',
-    'status': 'Status',
-    'date': 'Datum',
-    'copyright': 'Copyright',
-    'dedication': 'Dedikation',
-    'abstract': 'Sammanfattning',
-    'attention': 'Observera!',
-    'caution': 'Akta!',  # 'Varning' already used for 'warning'
-    'danger': 'FARA!',
-    'error': 'Fel',
-    'hint': 'Vink',
-    'important': 'Viktigt',
-    'note': 'Notera',
-    'tip': 'Tips',
-    'warning': 'Varning',
-    'contents': 'Innehåll'}
-"""Mapping of node class name to label text."""
+directives = {
+      'observera': 'attention',
+      'akta': 'caution',  # also 'försiktigt'
+      'kod': 'code',
+      'fara': 'danger',
+      'fel': 'error',
+      'vink': 'hint',  # also 'hint'
+      'viktigt': 'important',
+      'notera': 'note',
+      'tips': 'tip',
+      'varning': 'warning',
+      'anmärkning': 'admonition',  # literal 'tillrättavisning', 'förmaning'
+      'sidorad': 'sidebar',
+      'ämne': 'topic',
+      'tema': 'topic',
+      'rad-block': 'line-block',
+      # 'tolkad-bokstavlig'?
+      'parsed-literal (translation required)': 'parsed-literal',
+      'rubrik': 'rubric',
+      'epigraf': 'epigraph',
+      'höjdpunkter': 'highlights',
+      'pull-quote (translation required)': 'pull-quote',
+      'sammansatt': 'compound',
+      'container': 'container',
+      # 'frågor': 'questions',
+      # NOTE: A bit long, but recommended by http://www.nada.kth.se/dataterm/:
+      # 'frågor-och-svar': 'questions',
+      # 'vanliga-frågor': 'questions',
+      'tabell': 'table',
+      'csv-tabell': 'csv-table',
+      'list-tabell': 'list-table',
+      'meta': 'meta',
+      'matematik': 'math',
+      # 'bildkarta': 'imagemap',  # FIXME: Translation might be too literal.
+      'bild': 'image',
+      'figur': 'figure',
+      'inkludera': 'include',
+      'rå': 'raw',
+      'ersätta': 'replace',
+      'unicode': 'unicode',
+      'datum': 'date',
+      'klass': 'class',
+      'roll': 'role',
+      'standardroll': 'default-role',
+      'titel': 'title',
+      'innehåll': 'contents',
+      'sektionsnumrering': 'sectnum',
+      'target-notes (translation required)': 'target-notes',
+      'sidhuvud': 'header',
+      'sidfot': 'footer',
+      # 'fotnoter': 'footnotes',
+      # 'citeringar': 'citations',
+      }
+"""Swedish name to registered (in directives/__init__.py) directive name
+mapping."""
 
-bibliographic_fields = {
-    # 'Author' and 'Authors' identical in Swedish; assume the plural:
-    'författare': 'authors',
-    ' n/a': 'author',
-    'organisation': 'organization',
-    'adress': 'address',
-    'kontakt': 'contact',
-    'version': 'version',
-    'revision': 'revision',
-    'status': 'status',
-    'datum': 'date',
-    'copyright': 'copyright',
-    'dedikation': 'dedication',
-    'sammanfattning': 'abstract'}
-"""Swedish (lowcased) to canonical name mapping for bibliographic fields."""
-
-author_separators = [';', ',']
-"""List of separator strings for the 'Authors' bibliographic field. Tried in
-order."""
+roles = {
+      'förkortning': 'abbreviation',
+      'akronym': 'acronym',
+      'kod': 'code',
+      'index': 'index',
+      'nedsänkt': 'subscript',
+      'upphöjd': 'superscript',
+      'titel-referens': 'title-reference',
+      'pep-referens': 'pep-reference',
+      'rfc-referens': 'rfc-reference',
+      'betoning': 'emphasis',
+      'stark': 'strong',
+      'bokstavlig': 'literal',  # also 'ordagranna'
+      'matematik': 'math',
+      'namngiven-referens': 'named-reference',
+      'anonym-referens': 'anonymous-reference',
+      'fotnot-referens': 'footnote-reference',
+      'citat-referens': 'citation-reference',
+      'ersättnings-referens': 'substitution-reference',
+      'mål': 'target',
+      'uri-referens': 'uri-reference',
+      'rå': 'raw',
+      }
+"""Mapping of Swedish role names to canonical role names for interpreted text.
+"""
